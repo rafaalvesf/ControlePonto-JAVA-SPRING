@@ -29,4 +29,11 @@ public class JornadaService {
     public Optional<JornadaTrabalho> getById(Long idJornada) {
         return jornadaRepository.findById(idJornada);
     }
+
+    public JornadaTrabalho update(JornadaTrabalho jornadaTrabalho){
+        return jornadaRepository.save(jornadaTrabalho);
+    }
+    public void delete(Long idJornada) {
+        jornadaRepository.deleteById(idJornada);
+    }
 }
